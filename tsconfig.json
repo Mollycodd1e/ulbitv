@@ -8,6 +8,9 @@
     "allowJs": true,
     "moduleResolution": "node",
     "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     // позволяет работать с импортами по имени
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
