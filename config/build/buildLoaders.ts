@@ -9,7 +9,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 	}
 
 	const babelLoader = {
-		test: /\.(js|ts|jsx|tsx)$/,
+		test: /\.(js|jsx|tsx)$/,
 		exclude: /node_modules/,
 		use: {
 			loader: 'babel-loader',

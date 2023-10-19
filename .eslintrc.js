@@ -1,12 +1,14 @@
 module.exports = {
 	'env': {
 		'browser': true,
-		'es2021': true
+		'es2021': true,
+		'jest': true
 	},
 	'extends': [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
-		'plugin:react/recommended'
+		'plugin:react/recommended',
+		'plugin:i18next/recommended'
 	],
 	'overrides': [
 		{
@@ -28,7 +30,8 @@ module.exports = {
 	},
 	'plugins': [
 		'@typescript-eslint',
-		'react'
+		'react',
+		'i18next'
 	],
 	'rules': {
 		'react/jsx-filename-extension': [2, { 'extensions': ['.js', '.jsx', '.tsx'] }],
@@ -66,7 +69,10 @@ module.exports = {
 		'import/no-extraneous-dependencies': 'off',
 		'react/no-deprecated': 'off',
 		'@typescript-eslint/no-unused-vars': 'warn',
-		'no-underscore-dangle': 'off'
+		'no-underscore-dangle': 'off',
+		'@typescript-eslint/ban-ts-comment': 'off',
+		'i18next/no-literal-string': ['error', { markupOnly: true }],
+		'max-len': ['error', { ignoreComments: true}]
 	},
 	globals: {
 		'__IS_DEV__': true
