@@ -1,62 +1,43 @@
 module.exports = {
-	'env': {
-		'browser': true,
-		'es2021': true,
-		'jest': true
+	env: {
+		browser: true,
+		es2021: true,
+		jest: true,
 	},
-	'extends': [
+	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:react/recommended',
-		'plugin:i18next/recommended'
+		'plugin:i18next/recommended',
 	],
-	'overrides': [
+	overrides: [
 		{
-			'env': {
-				'node': true
+			env: {
+				node: true,
 			},
-			'files': [
-				'.eslintrc.{js,cjs}'
-			],
-			'parserOptions': {
-				'sourceType': 'script'
-			}
-		}
+			files: ['.eslintrc.{js,cjs}'],
+			parserOptions: {
+				sourceType: 'script',
+			},
+		},
 	],
-	'parser': '@typescript-eslint/parser',
-	'parserOptions': {
-		'ecmaVersion': 'latest',
-		'sourceType': 'module'
+	parser: '@typescript-eslint/parser',
+	parserOptions: {
+		ecmaVersion: 'latest',
+		sourceType: 'module',
 	},
-	'plugins': [
-		'@typescript-eslint',
-		'react',
-		'i18next'
-	],
-	'rules': {
-		'react/jsx-filename-extension': [2, { 'extensions': ['.js', '.jsx', '.tsx'] }],
-		'react/jsx-indent': [
-			'error', 'tab'
+	plugins: ['@typescript-eslint', 'react', 'i18next'],
+	rules: {
+		'react/jsx-filename-extension': [
+			2,
+			{ extensions: ['.js', '.jsx', '.tsx'] },
 		],
-		'react/jsx-indent-props': [
-			'error', 'tab'
-		],
-		'indent': [
-			'error',
-			'tab'
-		],
-		'linebreak-style': [
-			'error',
-			'windows'
-		],
-		'quotes': [
-			'error',
-			'single'
-		],
-		'semi': [
-			'error',
-			'never'
-		],
+		'react/jsx-indent': ['error', 'tab'],
+		'react/jsx-indent-props': ['error', 'tab'],
+		indent: ['error', 'tab'],
+		'linebreak-style': ['error', 'windows'],
+		quotes: ['error', 'single'],
+		semi: ['error', 'never'],
 		'import/no-unresolved': 'off',
 		'import/prefer-default-export': 'off',
 		'no-unused-vars': 'warn',
@@ -72,9 +53,9 @@ module.exports = {
 		'no-underscore-dangle': 'off',
 		'@typescript-eslint/ban-ts-comment': 'off',
 		'i18next/no-literal-string': ['error', { markupOnly: true }],
-		'max-len': ['error', { ignoreComments: true}]
+		'max-len': ['error', { ignoreComments: true, code: 100 }],
 	},
 	globals: {
-		'__IS_DEV__': true
-	}
+		__IS_DEV__: true,
+	},
 }
