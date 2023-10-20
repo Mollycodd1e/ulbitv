@@ -1,5 +1,4 @@
-
-import Button from 'shared/ui/Button/Button'
+import { Button } from 'shared/ui/Button/Button'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -7,13 +6,13 @@ import { useTranslation } from 'react-i18next'
 export const BugButton = () => {
 	const [error, setError] = useState<boolean>(false)
 
-	const {t} = useTranslation()
+	const { t } = useTranslation()
 	const onThrow = () => {
 		setError((prev) => !prev)
 	}
 
 	useEffect(() => {
-		if(error) {
+		if (error) {
 			throw new Error('error')
 		}
 	}, [error])

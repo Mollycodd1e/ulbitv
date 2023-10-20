@@ -12,6 +12,12 @@ module.exports = {
 	],
 	overrides: [
 		{
+			files: ['**/src/**/*.test.{ts, tsx}'],
+			rules: {
+				'i18next/no-literal-string': 'off',
+			},
+		},
+		{
 			env: {
 				node: true,
 			},
@@ -28,10 +34,7 @@ module.exports = {
 	},
 	plugins: ['@typescript-eslint', 'react', 'i18next'],
 	rules: {
-		'react/jsx-filename-extension': [
-			2,
-			{ extensions: ['.js', '.jsx', '.tsx'] },
-		],
+		'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
 		'react/jsx-indent': ['error', 'tab'],
 		'react/jsx-indent-props': ['error', 'tab'],
 		indent: ['error', 'tab'],
@@ -52,7 +55,8 @@ module.exports = {
 		'@typescript-eslint/no-unused-vars': 'warn',
 		'no-underscore-dangle': 'off',
 		'@typescript-eslint/ban-ts-comment': 'off',
-		'i18next/no-literal-string': ['error', { markupOnly: true }],
+		'i18next/no-literal-string': ['error', { markupOnly: true,
+			ignoreAttributes: ['data-testid'] }],
 		'max-len': ['error', { ignoreComments: true, code: 100 }],
 	},
 	globals: {
