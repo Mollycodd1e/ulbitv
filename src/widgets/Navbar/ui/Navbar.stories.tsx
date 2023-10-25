@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Navbar} from './Navbar'
+import { Navbar } from './Navbar'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 import { RouterDecorator } from 'shared/config/storybook/RouterDecorator/RouterDecorator'
@@ -20,9 +20,9 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
-	decorators: [ThemeDecorator(Theme.LIGHT)]
+	decorators: [ThemeDecorator(Theme.LIGHT), RouterDecorator()],
 }
 
 export const Secondary: Story = {
-	decorators: [ThemeDecorator(Theme.DARK)]
+	decorators: [ThemeDecorator(Theme.DARK), RouterDecorator()],
 }

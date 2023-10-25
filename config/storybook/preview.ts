@@ -14,8 +14,7 @@ const preview: Preview = {
 				date: /Date$/i,
 			},
 		},
-		decorators: [StyleDecorator(),ThemeDecorator(Theme.LIGHT), RouterDecorator()
-		],
+		decorators: [StyleDecorator(),ThemeDecorator(Theme.LIGHT), RouterDecorator()],
 	},
 }
 
