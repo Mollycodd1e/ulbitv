@@ -20,7 +20,11 @@
 	width: 6px;
 	height: 18px;
 	border-radius: 20%;
-	background: #fff;
+	background: var(--inverted-bg-color);
+}
+
+.dark div::after {
+	background: #e8e8ea;
 }
 
 .ldsSpinner div:nth-child(1) {
