@@ -4,7 +4,13 @@ module.exports = {
 		es2021: true,
 		jest: true,
 	},
-	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
+	extends: [
+		'eslint:recommended',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:react/recommended',
+		'plugin:i18next/recommended',
+		'plugin:storybook/recommended',
+	],
 	overrides: [
 		{
 			files: ['**/src/**/*.test.{ts, tsx}'],
@@ -50,9 +56,12 @@ module.exports = {
 		'@typescript-eslint/no-unused-vars': 'warn',
 		'no-underscore-dangle': 'off',
 		'@typescript-eslint/ban-ts-comment': 'off',
+		'react/display-name': 'warn',
 		'@typescript-eslint/no-explicit-any': 'warn',
-		'i18next/no-literal-string': ['error', { markupOnly: true,
-			ignoreAttributes: ['data-testid', 'to'] }],
+		'i18next/no-literal-string': [
+			'error',
+			{ markupOnly: true, ignoreAttributes: ['data-testid', 'to'] },
+		],
 		'max-len': ['error', { ignoreComments: true, code: 100 }],
 	},
 	globals: {

@@ -1,8 +1,6 @@
 import type { Preview } from '@storybook/react'
-import {ThemeDecorator} from './../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {StyleDecorator} from './../../src/shared/config/storybook/StyleDecorator/StyleDecorator'
 import {RouterDecorator} from './../../src/shared/config/storybook/RouterDecorator/RouterDecorator'
-import { Theme } from '../../src/app/providers/ThemeProvider'
 import '../../src/app/styles/index.scss'
 
 const preview: Preview = {
@@ -14,7 +12,7 @@ const preview: Preview = {
 				date: /Date$/i,
 			},
 		},
-		decorators: [StyleDecorator(),ThemeDecorator(Theme.LIGHT), RouterDecorator()],
+		decorators: [StyleDecorator(), RouterDecorator()],
 	},
 }
 
