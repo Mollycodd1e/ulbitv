@@ -9,6 +9,7 @@ import {
 	useEffect,
 } from 'react'
 import { Portal } from 'shared/ui/Portal/ui/Portal'
+import { useTheme } from 'app/providers/ThemeProvider'
 
 interface IModalProps {
 	className?: string
@@ -32,6 +33,8 @@ export const Modal = ({ className, children, isOpen, setIsOpen }: IModalProps) =
 		e.stopPropagation()
 	}
 
+	const { theme } = useTheme()
+	console.log(theme)
 	useEffect(() => {
 		if (isOpen) {
 			window.addEventListener('keydown', (e) => onKeyDown(e as any))
@@ -49,7 +52,9 @@ export const Modal = ({ className, children, isOpen, setIsOpen }: IModalProps) =
 					className={cls.overlay}
 					onClick={() => setIsOpen((prev) => !prev)}
 					onKeyDown={onKeyDown}>
-					<div className={cls.content} onClick={onContentClick}>
+					<div
+						className={classNames(cls.content, { [cls.light]: theme === 'light' }, [])}
+						onClick={onContentClick}>
 						{children}
 					</div>
 				</div>

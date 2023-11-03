@@ -24,7 +24,13 @@
 	border-radius: 12px;
 	transition: 0.5s transform;
 	transform: scale(0.5);
-	background-color: var(--bg-color);
+	background: var(--inverted-bg-color);
+	color: var(--bg-color);
+}
+
+.light {
+	background: var(--bg-color);
+	color: #000;
 }
 
 .opened {
