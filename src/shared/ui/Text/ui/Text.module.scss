@@ -1,0 +1,9 @@
+.root {
+	& p:first-child {
+		color: var(--primary-color);
+	}
+
+	& p:last-child {
+		color: var(--inverted-primary-color);
+	}
+}
