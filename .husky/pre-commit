@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+
+  npm run "build:prod": "webpack --env mode=production",
+  npm run "lint:ts": "eslint \"**/*.{ts, tsx}\"",
+  npm run "lint:scss": "npx stylelint \"**/*.scss\"",
+  npm run "test:unit": "jest",
+  npm run "storybook:build": "storybook build -c ./config/storybook",
