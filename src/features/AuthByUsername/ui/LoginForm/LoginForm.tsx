@@ -13,8 +13,14 @@ export const LoginForm = ({ className }: ILoginFormProps) => {
 
 	return (
 		<div className={classNames(cls.root, {}, [className])}>
-			<Input className={cls.input} type='text'></Input>
-			<Input className={cls.input} type='text'></Input>
+			<div className={cls.inputWrapper}>
+				<label>{t('Логин')}</label>
+				<Input className={cls.input} type='text'></Input>
+			</div>
+			<div className={cls.inputWrapper}>
+				<label>{t('Пароль')}</label>
+				<Input className={cls.input} type='text'></Input>
+			</div>
 			<Button className={cls.loginBtn}>{t('Войти')}</Button>
 		</div>
 	)

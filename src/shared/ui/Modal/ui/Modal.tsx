@@ -46,7 +46,7 @@ export const Modal = ({ className, children, isOpen, setIsOpen }: IModalProps) =
 	}, [isOpen])
 
 	return (
-		<Portal>
+		<Portal element={document.querySelector('.app')}>
 			<div className={classNames(cls.root, { [cls.opened]: isOpen }, [className])}>
 				<div
 					className={cls.overlay}

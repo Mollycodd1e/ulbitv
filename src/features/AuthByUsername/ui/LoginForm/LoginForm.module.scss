@@ -4,8 +4,17 @@
 	align-items: center;
 }
 
-.input {
+.inputWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	margin-bottom: 30px;
+
+	width: 350px;
+}
+
+.input {
+	width: 280px !important;
 }
 
 .loginBtn {

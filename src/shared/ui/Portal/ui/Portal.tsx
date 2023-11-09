@@ -6,7 +6,7 @@ interface IPortalProps {
 	element?: HTMLElement
 }
 
-export const Portal = ({ children, element = document.body }: IPortalProps) => {
+export const Portal = ({ children, element = document.body}: IPortalProps) => {
 
 	return createPortal(children, element)
 }

@@ -20,17 +20,13 @@
 
 .content {
 	padding: 24px;
-	width: 60%;
+	width: inherit;
+	width: max-content;
 	border-radius: 12px;
 	transition: 0.5s transform;
 	transform: scale(0.5);
 	background: var(--inverted-bg-color);
 	color: var(--bg-color);
-}
-
-.light {
-	background: var(--bg-color);
-	color: #000;
 }
 
 .opened {
