@@ -4,21 +4,27 @@ import { useTheme } from 'app/providers/ThemeProvider'
 import { AppRouter } from './providers/router'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
-import { Suspense } from 'react'
+import { Suspense, useEffect } from 'react'
 import { AppProvider } from './providers/AppProvider/AppProvider'
+import { useDispatch } from 'react-redux'
+import { userActions } from 'entities/User'
 
 const App = () => {
-
-
 	const { theme } = useTheme()
+
+	const dispatch = useDispatch()
+
+	useEffect(() => {
+		dispatch(userActions.intiAuthData)
+	}, [dispatch])
 
 	return (
 		<AppProvider>
 			<div className={classNames('app', {}, [theme])}>
 				<Suspense fallback=''>
-					<Navbar/>
+					<Navbar />
 					<div className='content-page'>
-						<Sidebar/>
+						<Sidebar />
 						<AppRouter />
 					</div>
 				</Suspense>

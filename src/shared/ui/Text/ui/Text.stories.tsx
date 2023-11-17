@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Text } from './Text'
+import { Text, TextTheme } from './Text'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 
@@ -58,6 +58,22 @@ export const PrimaryText: Story = {
 export const DarkText: Story = {
 	args: {
 		text: 'Приветики'
+	},
+	decorators: [ThemeDecorator(Theme.DARK)],
+}
+
+export const PrimaryError: Story = {
+	args: {
+		text: 'Приветики',
+		theme: TextTheme.ERROR
+	},
+	decorators: [ThemeDecorator(Theme.LIGHT)],
+}
+
+export const DarkError: Story = {
+	args: {
+		text: 'Приветики',
+		theme: TextTheme.ERROR
 	},
 	decorators: [ThemeDecorator(Theme.DARK)],
 }

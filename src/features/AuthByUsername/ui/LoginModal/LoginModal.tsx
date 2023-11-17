@@ -11,10 +11,13 @@ interface ILoginModalProps {
 }
 
 export const LoginModal = ({ className, isOpen, onClose }: ILoginModalProps) => {
+
 	return (
-		<Modal className={classNames(cls.root, {}, [className])}
-			isOpen={isOpen} setIsOpen={onClose}>
-			<LoginForm></LoginForm>
+		<Modal
+			className={classNames(cls.root, {}, [className])}
+			isOpen={isOpen}
+			setIsOpen={onClose}>
+			<LoginForm setIsOpen={onClose}></LoginForm>
 		</Modal>
 	)
 }

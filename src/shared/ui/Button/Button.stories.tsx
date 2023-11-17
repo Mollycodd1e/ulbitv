@@ -40,3 +40,11 @@ export const Outline: Story = {
 	},
 	decorators: [ThemeDecorator(Theme.DARK) as any]
 }
+
+export const Disabled: Story = {
+	args: {
+		children: 'TEST',
+		disabled: true
+	},
+	decorators: [ThemeDecorator(Theme.LIGHT)]
+}
